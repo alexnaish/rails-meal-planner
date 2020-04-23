@@ -6,6 +6,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # Disable the "Cannot render console from blah.blah.blah.blah! Allowed networks: 127.0.0.0/127.255.255.255, ::1"
+  config.web_console.whiny_requests = false
+
   # Do not eager load code on boot.
   config.eager_load = false
 
