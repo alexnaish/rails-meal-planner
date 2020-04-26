@@ -1,0 +1,35 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 24px;
+  text-align: left;
+  text-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+}
+
+th {
+  color: #D5DDE5;
+  background-color: #1b1e24;
+  border-bottom: 4px solid #9ea7af;
+  border-right:  1px solid #343a45;
+  font-size: 24px;
+}
+
+tr {
+  transition: background-color 0.3s ease;
+}
+
+tr:nth-child(odd) {
+  background-color: #EDEDED;
+}
+
+tr:hover {
+  background-color: #DCDCDC;
+}
