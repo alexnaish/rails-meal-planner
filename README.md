@@ -12,3 +12,11 @@
 1) `bundle update && bundle install`
 1) `rails server -p $PORT -b 0.0.0.0`
 1) Relax!
+
+## Useful Commands
+
+### Drop + Recreate DB
+
+This will destroy your db and then create it and then migrate your current schema.
+
+`rake db:drop db:create db:migrate`

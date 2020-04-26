@@ -10,7 +10,7 @@ EXPOSE $PORT
 ## Rails stuff
 RUN gem install rails bundler
 RUN gem install rails
-RUN apt-get update -qq && apt-get install -y nodejs
+RUN apt-get update -qq && apt-get install -y nodejs sqlite3
 
 ## Yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
