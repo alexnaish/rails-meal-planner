@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  before_action :logged_in, only: [:index, :show, :edit, :update, :destroy, :profile]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  rescue_from ActiveRecord::RecordNotFound, with: :return_to_index
+  # rescue_from ActiveRecord::RecordNotFound, with: :return_to_index
 
   # GET /users
   def index
@@ -43,6 +44,10 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     redirect_to users_url, notice: 'User was successfully destroyed.'
+  end
+
+  def profile
+    @user = User.includes(:recipes).find(session[:user_id])
   end
 
   private
